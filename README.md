@@ -65,7 +65,6 @@ sistema-voluntariado/
 │   ├── package.json
 │   └── vite.config.js
 ├── database.sql
-├── link_video.txt
 └── README.md
 ```
 
