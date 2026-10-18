@@ -1,0 +1,54 @@
+### 1. Autenticação como Administrador (devolve Token JWT)
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@ifrs.edu.br",
+  "password": "123456"
+}
+
+### 2. Autenticação como Utilizador Comum
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "comum@ifrs.edu.br",
+  "password": "123456"
+}
+
+### 3. Teste de Acesso à Rota Protegida do Dashboard
+# Substitua pelo token JWT gerado no login acima:
+@token = COLE_O_SEU_TOKEN_AQUI
+
+GET http://localhost:3000/dashboard
+Authorization: Bearer {{token}}
+
+### 4. Listar Todos os Eventos (Público)
+GET http://localhost:3000/events
+
+### 5. Registar Novo Evento (Exige token com role = admin)
+POST http://localhost:3000/events
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "title": "Campanha de Doação de Sangue 2026",
+  "description": "Ação solidária no campus IFRS Bento Gonçalves",
+  "date": "2026-11-20",
+  "location": "Auditório Central",
+  "max_volunteers": 25
+}
+
+### 6. Listar Todos os Voluntários
+GET http://localhost:3000/volunteers
+
+### 7. Registar Voluntário
+POST http://localhost:3000/volunteers
+Content-Type: application/json
+
+{
+  "name": "Mariana Santos",
+  "email": "mariana.santos@email.com",
+  "phone": "54999887766",
+  "skills": "Triagem e Primeiros Socorros"
+}
