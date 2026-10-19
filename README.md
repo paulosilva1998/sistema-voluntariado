@@ -1,6 +1,6 @@
 # Sistema de Gestão de Voluntariado - IFRS
 
-Aplicação web full-stack desenvolvida para a gestão e divulgação de ações sociais e voluntários, estruturada com controlo de acessos por papéis (RBAC), autenticação via JSON Web Tokens (JWT), operações CRUD completas e documentação interativa através do Swagger (OpenAPI 3.0).
+Aplicação web full-stack desenvolvida para a gestão e divulgação de ações sociais e voluntários, estruturada com controle de acessos por papéis (RBAC), autenticação via JSON Web Tokens (JWT), operações CRUD completas e documentação interativa através do Swagger (OpenAPI 3.0).
 
 ---
 
